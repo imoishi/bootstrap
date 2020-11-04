@@ -227,9 +227,53 @@
 
 
   </div>
+
+  <br>
+  <br>
+
+
+  <!-- form -->
+  <div class="container">
+    <form>
+      <!-- text field group -->
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input class="form-control" type="text" id="name" placeholder="Enter name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input class="form-control form-control-lg" type="email" id="email" placeholder="Enter email">
+        <small class="form-text text-muted">
+          Your email will not ever be shared
+        </small>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input class="form-control" type="password" id="password" placeholder="Enter password" readonly>
+      </div>
+      <!-- select -->
+      <div class="form-group">
+        <label for="gender">Gender</label>
+        <select id="gender" class="form-control">
+          <option>Male</option>
+          <option>Female</option>
+        </select>
+      </div>
+      <!-- range -->
+      <div class="form-group">
+        <label for="membership">Membership level</label>
+        <input class="custom-range" type="range" min="1" max="5" step="1" value="1">
+      </div>
+      
+    </form>
+  </div>
+  
  
 
 
+
+  <br>
+  <br>
 
   <script src="js/jquery-3.4.1.js"></script>
   <script src="js/bootstrap.js"></script>
