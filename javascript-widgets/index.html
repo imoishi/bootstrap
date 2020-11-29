@@ -200,17 +200,80 @@
 
   <br>
   <br>
-
+   
 
   <div class="container">
 
     <!-- tooltips -->
     <button class="btn btn-primary" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip On Top</button>
-    <button class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Tooltip on right">Tooltip On right</button>
-    <button class="btn btn-success" data-toggle="tooltip" data-placement="top" title="Tooltip on bottom">Tooltip On bottom</button>
+    <button class="btn btn-secondary" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip On right</button>
+    <button class="btn btn-success" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip On bottom</button>
 
   </div>
+
+  <div class="container mb-5">
+    <button class="btn btn-danger" data-toggle="popover" data-placement="top" data-content="Lorem ipsum dolor sit amet consectetur adipisicing.">toggle popover</button>
+  </div>
+
   
+  <!-- modal -->
+  <div class="container mb-5">
+    <!-- modal trigger -->
+    <button class="btn btn-primary" data-toggle="modal" data-target="#myModal">launch Modal</button>
+
+    <!-- modal -->
+    <div class="modal" id="myModal">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Modal Title</h5>
+            <button class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Odit dolor magnam laboriosam modi et veniam enim consectetur saepe beatae vitae!
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-dismiss="modal">Close</button> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <br>
+    <br>
+
+     <!-- login modal trigger -->
+     <button class="btn btn-dark" data-toggle="modal" data-target="#loginModal">login</button>
+
+     <!-- login modal -->
+     <div class="modal" id="loginModal">
+       <div class="modal-dialog">
+         <div class="modal-content">
+           <div class="modal-header">
+             <h5 class="modal-title">login</h5>
+             <button class="close" data-dismiss="modal">&times;</button>
+           </div>
+           <div class="modal-body">
+            <form>
+              <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" placeholder="Username" class="form-control">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" placeholder="Password" class="form-control">
+              </div>
+            </form>
+           </div>
+           <div class="modal-footer">
+             <button class="btn btn-secondary" data-dismiss="modal">Close</button> 
+             <button class="btn btn-primary" data-dismiss="modal">Login</button> 
+           </div>
+         </div>
+       </div>
+     </div>
+
+  </div>
 
 
 
@@ -231,9 +294,14 @@
       wrap: true
     });
 
-    $('#slider4').on('slide.bs.carousel',function(){
-      console.log('slide!');
-    });
+    // $('#slider4').on('slide.bs.carousel',function(){
+    //   console.log('slide!');
+    // });
+
+    //init tooltips
+    $('[data-toggle="tooltip"]').tooltip();
+
+    $('[data-toggle="popover"]').popover();
   </script>
 </body>
 </html>
